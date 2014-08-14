@@ -23,22 +23,37 @@ Partial Class FrmMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnSpeak = New System.Windows.Forms.Button()
+        Me.rctText = New System.Windows.Forms.RichTextBox()
         Me.SuspendLayout()
         '
         'btnSpeak
         '
-        Me.btnSpeak.Location = New System.Drawing.Point(106, 187)
+        Me.btnSpeak.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSpeak.Location = New System.Drawing.Point(104, 226)
         Me.btnSpeak.Name = "btnSpeak"
         Me.btnSpeak.Size = New System.Drawing.Size(75, 23)
         Me.btnSpeak.TabIndex = 0
         Me.btnSpeak.Text = "Parler"
         Me.btnSpeak.UseVisualStyleBackColor = True
         '
+        'rctText
+        '
+        Me.rctText.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.rctText.Location = New System.Drawing.Point(12, 12)
+        Me.rctText.Name = "rctText"
+        Me.rctText.Size = New System.Drawing.Size(260, 199)
+        Me.rctText.TabIndex = 1
+        Me.rctText.Text = ""
+        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.rctText)
         Me.Controls.Add(Me.btnSpeak)
         Me.Name = "FrmMain"
         Me.Text = "Voice Output"
@@ -46,5 +61,6 @@ Partial Class FrmMain
 
     End Sub
     Friend WithEvents btnSpeak As System.Windows.Forms.Button
+    Friend WithEvents rctText As System.Windows.Forms.RichTextBox
 
 End Class
