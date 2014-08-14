@@ -89,36 +89,36 @@ Partial Class frmMain
         Me.lblFile1.AutoSize = True
         Me.lblFile1.Location = New System.Drawing.Point(12, 9)
         Me.lblFile1.Name = "lblFile1"
-        Me.lblFile1.Size = New System.Drawing.Size(47, 13)
+        Me.lblFile1.Size = New System.Drawing.Size(73, 13)
         Me.lblFile1.TabIndex = 6
-        Me.lblFile1.Text = "Fichier 1"
+        Me.lblFile1.Text = "Fichier Locale"
         '
         'lblFile2
         '
         Me.lblFile2.AutoSize = True
         Me.lblFile2.Location = New System.Drawing.Point(12, 48)
         Me.lblFile2.Name = "lblFile2"
-        Me.lblFile2.Size = New System.Drawing.Size(47, 13)
+        Me.lblFile2.Size = New System.Drawing.Size(74, 13)
         Me.lblFile2.TabIndex = 7
-        Me.lblFile2.Text = "Fichier 2"
+        Me.lblFile2.Text = "Fichier Distant"
         '
         'lblFile3
         '
         Me.lblFile3.AutoSize = True
         Me.lblFile3.Location = New System.Drawing.Point(12, 87)
         Me.lblFile3.Name = "lblFile3"
-        Me.lblFile3.Size = New System.Drawing.Size(47, 13)
+        Me.lblFile3.Size = New System.Drawing.Size(80, 13)
         Me.lblFile3.TabIndex = 8
-        Me.lblFile3.Text = "Fichier 3"
+        Me.lblFile3.Text = "Fichier de Base"
         '
         'lblFile4
         '
         Me.lblFile4.AutoSize = True
         Me.lblFile4.Location = New System.Drawing.Point(12, 126)
         Me.lblFile4.Name = "lblFile4"
-        Me.lblFile4.Size = New System.Drawing.Size(47, 13)
+        Me.lblFile4.Size = New System.Drawing.Size(109, 13)
         Me.lblFile4.TabIndex = 9
-        Me.lblFile4.Text = "Fichier 4"
+        Me.lblFile4.Text = "Fichier de Destination"
         '
         'btnOuvrir
         '
