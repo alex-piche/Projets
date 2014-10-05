@@ -4,7 +4,22 @@
 
         Dim SAPI
         SAPI = CreateObject("SAPI.spvoice")
-        SAPI.speak(rctText.Text.Trim)
+
+        If IO.File.Exists(rctText.Text.Trim) Then
+
+            Dim texte = IO.File.ReadAllLines(rctText.Text.Trim)
+
+            For Each ligne As String In texte
+
+                SAPI.speak(ligne)
+
+            Next
+
+        Else
+
+            SAPI.speak(rctText.Text.Trim)
+
+        End If
 
     End Sub
 
