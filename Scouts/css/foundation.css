@@ -44,6 +44,11 @@ body {
   
 body {
   background: #005d3e;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#005d3e), to(#009119));
+  background-image: -webkit-linear-gradient(top, #005d3e, #009119);
+  background-image:    -moz-linear-gradient(top, #005d3e, #009119);
+  background-image:      -o-linear-gradient(top, #005d3e, #009119);
+  background-image:         linear-gradient(to bottom, #005d3e, #009119);
   color: #222222;
   padding: 0;
   margin: 0;
