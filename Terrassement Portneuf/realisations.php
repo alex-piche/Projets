@@ -47,7 +47,7 @@
 								return $files;
 							}	
 							
-							$files = glob_recursive("photo/*.jpg");
+							$files = glob_recursive("thumbs/*.jpg");
 							
 							$nbPhoto = count($files);
 							
@@ -61,7 +61,7 @@
 									{
 										echo "<td>";
 
-										echo "<a href=\"", utf8_encode($files[$k]), "\"><img src=\"", utf8_encode($files[$k]), "\" class=\"imgGalerie\"/></a>";
+										echo "<a href=\"", utf8_encode(str_replace("thumbs", "photo", $files[$k])), "\"><img src=\"", utf8_encode($files[$k]), "\" class=\"imgGalerie\"/></a>";
 
 										echo "</td>";
 										
