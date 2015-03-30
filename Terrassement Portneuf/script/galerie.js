@@ -46,7 +46,7 @@ function changerPhoto(e)
 	document.getElementById("GrandeImg").src = e.currentTarget.src;
 	document.getElementById("Lien").href = e.currentTarget.src;
 	position = e.currentTarget.id;
-	//e.currentTarget.style.border = "2px solid white";
+	e.currentTarget.style.border = "2px solid white";
 }
 
 function monter()
