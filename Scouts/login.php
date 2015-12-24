@@ -1,3 +1,15 @@
+<?php
+
+	session_start();
+	
+	if(isset($_POST["passwd"]) and $_POST["passwd"] == "Portneuf74")
+	{		
+			$_SESSION["auth"] = true;
+			header('Location: photos.php');	
+	}
+
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -17,49 +29,31 @@
     <div id="page" class="row panel">
 		<div class="large-3 medium-4 columns">
 			<div class="row">
-				<div id="menu" class="large-12 medium-12 columns text-center">
+				<div class="large-12 medium-12 columns text-center">
 					<ul class="side-nav">
 						<li><a href="index.html" class="button radius round">Accueil</a></li>
 						<li><a href="branches.html" class="button radius round">Branches</a></li>
-						<li><a href="photos.php" class="button radius round">Photos</a></li>
+						<li><a id="current" href="photos.php" class="button radius round">Photos</a></li>
 						<li><a href="calendrier.html" class="button radius round">Calendrier</a></li>
 						<li><a href="commanditaires.html" class="button radius round">Commanditaires</a></li>
-						<li><a id="current" href="contacter.html" class="button radius round">Nous Contacter</a></li>
+						<li><a href="contacter.html" class="button radius round">Nous Contacter</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		
-		<div class="large-9 medium-8 columns">
+		<div id="panel" class="large-9 medium-8 columns">
 			<div class="row">
 				<div class="large-12 columns text-center">
 					<div class="callout panel ombre">
-						<h1>Information Générale</h1>
-						<h2>Gilles Fiset</h2>
-						<p>418-286-3750</p>
+					<h1>Photos</h1>
+						<form action="login.php" method="post">
+							<label for="passwd">Mots de Passe</label>
+							<input type="password" name="passwd" id="passwd">
+							<input type="submit" value="Connexion">
+						</form>
 					</div>
 				</div>
-				<div class="large-12 columns text-center">
-					<div class="callout panel ombre">
-						<h1>Castors</h1>
-					</div>
-				</div>
-				<div class="large-12 columns text-center">
-					<div class="callout panel ombre">
-						<h1>Louveteaux</h1>
-						<h2>Marie-Pier Piché</h2>
-						<a href="mailto:rikki@scoutsportneuf.com">rikki@scoutsportneuf.com</a>
-						<p>418-326-2552</p>
-					</div>
-				</div>
-				<div class="large-12 columns text-center">
-					<div class="callout panel ombre">
-						<h1>Aventuriers</h1>
-						<h2>Pierre-Luc Rompré</h2>
-						<a href="mailto:pierreluc@scoutsportneuf.com">pierreluc@scoutsportneuf.com</a>
-					</div>
-				</div>
-			</div>
+			</div>	
 		</div>
     </div>
 	

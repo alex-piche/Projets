@@ -1,3 +1,14 @@
+<?php
+
+	session_start();
+	
+	if(!isset($_SESSION["auth"]) or !$_SESSION["auth"])
+	{		
+		header('Location: login.php');		
+	}
+
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -21,7 +32,7 @@
 					<ul class="side-nav">
 						<li><a href="index.html" class="button radius round">Accueil</a></li>
 						<li><a href="branches.html" class="button radius round">Branches</a></li>
-						<li><a id="current" href="photos.html" class="button radius round">Photos</a></li>
+						<li><a id="current" href="photos.php" class="button radius round">Photos</a></li>
 						<li><a href="calendrier.html" class="button radius round">Calendrier</a></li>
 						<li><a href="commanditaires.html" class="button radius round">Commanditaires</a></li>
 						<li><a href="contacter.html" class="button radius round">Nous Contacter</a></li>
@@ -50,8 +61,7 @@
 					</embed>
 					
 					<embed type="application/x-shockwave-flash" src="https://photos.gstatic.com/media/slideshow.swf" width="288" height="192" flashvars="host=picasaweb.google.com&hl=fr&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F100984745646961593272%2Falbumid%2F6151766453773181441%3Falt%3Drss%26kind%3Dphoto%26authkey%3DGv1sRgCOGCnsb83q7GOg%26hl%3Dfr" pluginspage="http://www.macromedia.com/go/getflashplayer">
-					</embed>
-					
+					</embed>				
 					</div>
 				</div>
 			</div>	
